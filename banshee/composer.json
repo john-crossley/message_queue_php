@@ -1,0 +1,14 @@
+{
+    "name": "john-crossley/banshee",
+    "description": "Banshee is a lightweight php routing system.",
+    "authors": [
+        {
+            "name": "John Crossley",
+            "email": "jonnysnip3r@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+
+    }
+}

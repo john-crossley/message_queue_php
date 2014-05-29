@@ -2,8 +2,6 @@
 
 namespace Banshee;
 
-class BansheeRouteException extends \Exception {}
-
 class Route {
 
     public $routes = array();
@@ -12,15 +10,22 @@ class Route {
         $this->routes[$route] = $callable;
     }
 
-    public function run()
+    public function getRoutes()
     {
-        $path = isset($_SERVER['PATH_INFO']) ? $_SERVER['PATH_INFO'] : '/';
+        return $this->routes;
+    }
+
+    public function run($path = null)
+    {
+        if (!$path) {
+            $path = isset($_SERVER['PATH_INFO']) ? $_SERVER['PATH_INFO'] : '/';
+        }
 
         if (!isset($this->routes[$path])) {
             throw new BansheeRouteException("Unable to locate route..");
         }
 
-        $this->routes[$path]();
+        return $this->routes[$path]();
     }
 
 }

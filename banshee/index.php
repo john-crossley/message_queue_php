@@ -1,6 +1,8 @@
 <?php
 
-require_once 'Banshee/Route.php';
+// TODO - Move this shit to an autoloader.
+require_once 'src/Banshee/Exceptions/BansheeRouteException.php';
+require_once 'src/Banshee/Route.php';
 
 $route = new \Banshee\Route;
 
