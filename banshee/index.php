@@ -9,7 +9,7 @@ $route->get('/', function () {
 });
 
 try {
-    $route->start();
+    $route->run();
 } catch (\Banshee\BansheeRouteException $e) {
     die($e->getMessage());
 }

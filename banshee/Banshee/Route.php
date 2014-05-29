@@ -12,7 +12,7 @@ class Route {
         $this->routes[$route] = $callable;
     }
 
-    public function start()
+    public function run()
     {
         $path = isset($_SERVER['PATH_INFO']) ? $_SERVER['PATH_INFO'] : '/';
 
