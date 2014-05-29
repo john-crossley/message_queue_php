@@ -1,6 +1,6 @@
 <?php
 
-require_once 'Banshee/Router.php';
+require_once 'Banshee/Route.php';
 
 $route = new \Banshee\Route;
 
